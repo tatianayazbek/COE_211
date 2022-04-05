@@ -6,8 +6,8 @@ public class newTicTacToe{
 	String[] b= {"_" , "_" , "_"};
 	String[] c= {"_" , "_" , "_"};
 	int i;
-	
 	Scanner scan=new Scanner(System.in);
+		
 	for ( i=0; i<a.length+b.length+c.length ; i++){
 		
 		System.out.println("enter a row and a column: \n  1  2  3\n"
