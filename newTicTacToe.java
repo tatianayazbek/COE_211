@@ -5,10 +5,11 @@ public class newTicTacToe{
 	String[] a= {"_" , "_" , "_"};
 	String[] b= {"_" , "_" , "_"};
 	String[] c= {"_" , "_" , "_"};
+	int i;
 	
 	Scanner scan=new Scanner(System.in);
-	for (int i=0; i<a.length+b.length+c.length ; i++){
-	
+	for ( i=0; i<a.length+b.length+c.length ; i++){
+		
 		System.out.println("enter a row and a column: \n  1  2  3\n"
 				+"a"+ Arrays.toString(a)+"\n"
 				+"b"+Arrays.toString(b)+"\n"
@@ -33,13 +34,13 @@ public class newTicTacToe{
 		if( Arrays.equals(a, d) || 
 		    Arrays.equals(b, d) ||
 		    Arrays.equals(c, d) || 
-		    a[0].equals(b[1].equals(c[2].equals(minenta))) ||
-		    a[2].equals(b[1].equals(c[0].equals(minenta))) ||
-		    a[0].equals(b[0].equals(c[0].equals(minenta))) ||
-		    a[1].equals(b[1].equals(c[1].equals(minenta))) ||
-		    a[2].equals(b[2].equals(c[2].equals(minenta)))){ 
+		    a[0].equals(b[1]) && a[0].equals(c[2]) && c[2].equals(minenta)||
+		    a[2].equals(b[1]) && a[2].equals(c[0]) && c[0].equals(minenta) ||
+		    a[0].equals(b[0]) && a[0].equals(c[0]) && c[0].equals(minenta) ||
+		    a[1].equals(b[1]) && a[1].equals(c[1]) && c[1].equals(minenta)||
+		    a[2].equals(b[2]) && a[2].equals(c[2]) && c[2].equals(minenta)){ 
 			System.out.println( "1  2  3\n"
-				+"a"+ Arrays.toString(a)+"\n"
+				+"a"+Arrays.toString(a)+"\n"
 				+"b"+Arrays.toString(b)+"\n"
 				+"c"+Arrays.toString(c)+"\n"
 				+minenta +" won this round!");
@@ -47,8 +48,11 @@ public class newTicTacToe{
 			break;	
 		}else{
 			continue;
+
 		}
 					
 		}
+		if(i==a.length+b.length+c.length) System.out.println("No one won this round");	
+		
 	}
 }
